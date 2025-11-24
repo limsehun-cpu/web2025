@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    background-color: rgba(227, 227, 227, 0.251);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid black;
+}
+
+header h1 {
+    margin: 0;
+    padding: 30px 10px 30px 50px;
+}
+
+#menu_button {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+#menu_button:hover {
+    background-color: rgb(180, 180, 180);
+    cursor: pointer;
+}
+
+#list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(222, 222, 222);
+    height: 100vh;
+    margin: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 30px;
+}
+
+#list.active {
+    transform: translateX(0);
+}
+
+#list button {
+    margin: 0 0 20px 20px;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(247, 247, 247);
+    transition: background-color 0.2s ease;
+    font-size: 2rem;
+}
+
+#list button:hover {
+    background-color: rgb(180, 180, 180);
+    cursor: pointer;
+}
+
+#list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#list li {
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+#list a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    display: block;
+    padding: 15px 15px 15px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#list a:hover {
+    background-color: rgb(147, 147, 147);
+    cursor: pointer;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.485);
+    color: white;
+}
