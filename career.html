@@ -6,7 +6,24 @@
     <title>졸업 후 진로</title>
     <link rel="stylesheet" href="style.css">
     <style>
-
+        #career-table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 0 auto;
+        }
+        #career-table th, #career-table td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        #career-table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: rgb(0, 128, 90);
+            color: white;
+        }
+        #career-table tr:nth-child(even) {
+            background-color: rgb(241, 241, 241);
+        }
     </style>
 </head>
 <body>
@@ -31,11 +48,42 @@
     </div>
 
     <main>
-
+        <table id="career-table">
+            <tr>
+                <th colspan="2">구분</th><th>주요내용</th>
+            </tr>
+            <tr>
+                <th rowspan="4">취업분야</th><td>공공/행정/교육기관 등</td>
+                <td>
+                    공기업, 행정기관, 대학 및 각 교육기관, 관공서 연구소 등
+                </td>
+            </tr>
+            <tr>
+                <td>AI, 데이터분석, 비전,멀티미디어</td>
+                <td>
+                    인공지능, 머신러닝, 빅데이터분석, DB, 로봇, 챗봇, 웹&앱 개발, 멀티미디어 콘텐츠, 
+                    게임, 애니메이션, 영상처리
+                </td>
+            </tr>
+            <tr>
+                <td>보안, 시스템, 네트워크, HW</td>
+                <td>
+                    보안, 백신개발, 블록체인, 데이터센터, 클라우드업체, 퀀텀 및 슈퍼 컴퓨팅, 
+                    H/W 개발, 유.무선 네트워크업체, IoT & 유비쿼터스 업체
+                </td>
+            </tr>
+            <tr>
+                <td>SW, 프로그래밍</td>
+                <td>
+                    인터넷 방송기업, 주식 및 금융업체, e-Book, 홈쇼핑, 포털업체, 컨설팅, 
+                    벤처, BT-NT기업, 사이버교육
+                </td>
+            </tr>
+        </table>
     </main>
 
     <footer>
-        web2025
+        
     </footer>
 
     <script>

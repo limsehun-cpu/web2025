@@ -1,7 +1,6 @@
 body {
     margin: 0;
-    background-color: rgba(227, 227, 227, 0.251);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Noto Sans KR', 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -28,7 +27,7 @@ header h1 {
     border: 1px solid black;
     border-radius: 10px;
     font-size: 1.2rem;
-    background-color: transparent;
+    background-color: white;
     transition: background-color 0.2s ease;
 }
 
@@ -47,7 +46,7 @@ header h1 {
     border: 1px solid black;
     border-radius: 10px;
     font-size: 1.2rem;
-    background-color: transparent;
+    background-color: white;
     transition: background-color 0.2s ease;
 }
 
@@ -121,6 +120,6 @@ main {
 footer {
     text-align: center;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.485);
+    background-color: rgb(156, 156, 156);
     color: white;
 }

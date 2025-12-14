@@ -6,14 +6,50 @@
     <title>학과 소개</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .laptop_img {
-            width: 40%;
-            height: auto;
-            float: right;
-            margin-left: 10px;
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        main p {
-            margin-top: 0px;
+
+        .container h1 {
+            margin-bottom: 10px;
+        }
+
+        .container p {
+            line-height: 1.7;
+        }
+
+        .btn-area {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-area button {
+            padding: 12px 20px;
+            border: none;
+            background: rgb(0, 186, 0);
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        .btn-area button:hover {
+            background: rgb(80, 154, 0);
+        }
+
+        .content-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: wheat;
+            border-radius: 8px;
+            display: none;
         }
     </style>
 </head>
@@ -39,35 +75,56 @@
     </div>
 
     <main>
-        <img src="Laptop.png" alt="Laptop" class="laptop_img">
-        <p>
-            컴퓨터공학과(Department of Computer Science and Engineering/CSE)는 컴퓨터과학 및 컴퓨터공학을 공부하는 학과이다.
-            <br>
-            <a href="https://namu.wiki/w/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%B5%ED%95%99%EA%B3%BC" target="_blank">
-                (컴퓨터공학과 나무위키)
-            </a>
-        </p>
-        <p>
-            컴퓨터 공학(영어: computer engineering)은 컴퓨터 하드웨어 및 소프트웨어를 개발하는 데 필요한 전기공학 및 컴퓨터
-            과학의 여러 가지 분야를 통합하는 전기공학 및 컴퓨터 과학의 한 분과이다. 현대 정보화 사회에서 컴퓨터의 하드웨어와
-            소프트웨어를 연구, 컴퓨터 시스템과 컴퓨터 관련 기술을 개발하여 익히고 이를 각 분야에 응용함을 목적으로 한다.
-            <br>
-            <a href="https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%B5%ED%95%99">
-                (컴퓨터 공학 위키백과)
-            </a>
-        </p>
-        <p>
-            컴퓨터 과학(영어: computer science, 컴퓨터 사이언스) 또는 전산학(電算學)은 계산(computation),
-            정보(information) 그리고 자동화(automation)에 대한 학문이다.
-            <br>
-            <a href="https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99">
-                (컴퓨터 과학 위키백과)
-            </a>
-        </p>
+        <div class="container">
+            <h1>컴퓨터공학과</h1>
+            <p>
+                어느날 갑자기 지구상의 모든 컴퓨터가 사라진다면 모든 것이 정지될지도 모릅니다. 
+                컴퓨터공학은 IT와 정보통신 기술을 기반으로 정보화 시대를 이끄는 첨단 공학 분야라 할 수 있습니다. 
+                모든 산업 분야에 컴퓨터 공학 기술은 깊은 관련이 있습니다. 컴퓨터 공학은 컴퓨터 시스템, 
+                프로그래밍 기법, 알고리즘 설계, 응용소프트웨어 개발, 정보화사업 관리방법론 등 다양한 이론과 
+                실습을 통해 유능한 인재를 키우는데 목표를 두고 있는 학과입니다.(커리어넷)
+            </p>
+
+            <div class="btn-area">
+                <button onclick="showContent('computer_engineering')">컴퓨터 공학</button>
+                <button onclick="showContent('computer_science')">컴퓨터 과학</button>
+            </div>
+
+            <div id="computer_engineering" class="content-box">
+                <h3>컴퓨터 공학</h3>
+                <p>
+                    컴퓨터 공학(영어: computer engineering)은 컴퓨터 하드웨어 및 소프트웨어를 개발하는 
+                    데 필요한 전기공학 및 컴퓨터 과학의 여러 가지 분야를 통합하는 전기공학 및 컴퓨터 
+                    과학의 한 분과이다. 현대 정보화 사회에서 컴퓨터의 하드웨어와 소프트웨어를 연구, 
+                    컴퓨터 시스템과 컴퓨터 관련 기술을 개발하여 익히고 이를 각 분야에 응용함을 
+                    목적으로 한다.
+                    <br>
+                    <a href="https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%B5%ED%95%99">
+                        컴퓨터 공학 위키백과
+                    </a>
+                </p>
+            </div>
+
+            <div id="computer_science" class="content-box">
+                <h3>컴퓨터 과학</h3>
+                <p>
+                    컴퓨터 과학(영어: computer science, 컴퓨터 사이언스) 또는 전산학(電算學)은 
+                    계산(computation), 정보(information) 그리고 자동화(automation)에 대한 학문이다.
+                    <br>
+                    컴퓨터 과학은 알고리즘, 계산 및 정보에 대한 이론적 연구에서부터 하드웨어와 
+                    소프트웨어의 계산 시스템 구현에 대한 실질적인 문제에 이르기까지 다양한 주제를 다룬다.
+                    <br>
+                    전산 이론 및 시스템 설계를 연구하는 전문가를 컴퓨터 과학자 또는 전산학자라 부른다.<br>
+                    <a href="https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99">
+                        컴퓨터 과학 위키백과
+                    </a>
+                </p>
+            </div>
+        </div>
     </main>
 
     <footer>
-        web2025
+        
     </footer>
 
     <script>
@@ -82,6 +139,13 @@
         close_button.addEventListener('click', () => {
             list.classList.remove('active');
         });
+
+        function showContent(id) {
+            const boxes = document.querySelectorAll('.content-box');
+            boxes.forEach(box => box.style.display = 'none');
+
+            document.getElementById(id).style.display = 'block';
+        }
     </script>
 </body>
 </html>
